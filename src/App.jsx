@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -8,7 +8,7 @@ import UserDetails from "./pages/UserDetails";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* Navigation bar shown on all pages */}
       <Navbar />
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/edit-user/:id" element={<EditUser />} />
         <Route path="/user/:id" element={<UserDetails />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
